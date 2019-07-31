@@ -1,11 +1,23 @@
 package model;
 
-import java.util.ArrayList; // Add comments
+import java.util.ArrayList; 
 
+/**
+ * Class that models a social agenda.
+ * @author Pedro Guillermo Feij�o && Ana Ausek
+ */
+
+//Initializing the Agenda constructor
 public class Agenda {
 
+	/**
+	 * Variable storing number of friends
+	 */
 	private int numberOfFriends;
 
+	/**
+	 * Arraylist of friends instances
+	 */
 	private ArrayList<Friend> friends;
 
 	public Agenda() {
@@ -14,11 +26,13 @@ public class Agenda {
 		friends = new ArrayList<Friend>();
 	}
 
+	//Method get total number of friends added to the agenda
 	public int getNumberOfFriends() {
 
 		return numberOfFriends;
 	}
 
+	//Method to add friend instance 
 	public boolean addFriend(String pName, String pPhoneNumber)throws Exception {
 
 		boolean response = false;
@@ -48,6 +62,7 @@ public class Agenda {
 		return response;
 	}
 
+	//Method to check if phone number exists using phone number input
 	private boolean phoneNumberExists(String pPhoneNumber) {
 
 		boolean exists = false;
@@ -65,6 +80,7 @@ public class Agenda {
 		return exists;
 	}
 
+	//Method to search for an instance of friend using name input 
 	public Friend searchFriend(String pName) throws Exception {
 
 		Friend response = null;
@@ -92,6 +108,7 @@ public class Agenda {
 		return response;
 	}
 
+	//Method to remove friend instance using input name
 	public boolean removeFriend(String pName) throws Exception {
 
 		boolean response = false;
@@ -110,6 +127,7 @@ public class Agenda {
 		return response;
 	}
 
+	//Method to update existing phone number to new number using input name and phone number
 	public void updatePhoneNumber(String pName, String pPhoneNumber) throws Exception {
 
 
