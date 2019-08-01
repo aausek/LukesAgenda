@@ -99,10 +99,11 @@ public class Agenda {
 				response = a;
 			}
 
-			if(response == null) {
+		}
+		
+		if(response == null) {
 
-				throw new Exception("You don't have a friend with that name."); 
-			}
+			throw new Exception("You don't have a friend with that name."); 
 		}
 
 		return response;
